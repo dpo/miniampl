@@ -22,24 +22,26 @@ Once the `miniampl` executable is created, the following demonstrates how to
 call it from the command line. A test example is supplied in `wb.mod` and
 `wb.dat`. To generate the test example afresh, execute `ampl wb.ampl`.
 
-[dpo@pod:miniampl (master)]$ ./miniampl wb    # Only print objective value
-f(x0) = -2.000000000000000e+00
+::
 
-[dpo@pod:miniampl (master)]$ ./miniampl -=    # Show available options
-showgrad  Evaluate gradient
-showname  Display objective name
+    [dpo@pod:miniampl (master)]$ ./miniampl wb    # Only print objective value
+    f(x0) = -2.000000000000000e+00
 
-[dpo@pod:miniampl (master)]$ ./miniampl wb showname=1
-showname=1
-Objective name: objective
-f(x0) = -2.000000000000000e+00
+    [dpo@pod:miniampl (master)]$ ./miniampl -=    # Show available options
+    showgrad  Evaluate gradient
+    showname  Display objective name
 
-[dpo@pod:miniampl (master)]$ ./miniampl wb showname=1 showgrad=1
-showname=1
-showgrad=1
-Objective name: objective
-f(x0) = -2.000000000000000e+00
-g(x0) = [  1.0e+00  0.0e+00  0.0e+00 ]
+    [dpo@pod:miniampl (master)]$ ./miniampl wb showname=1
+    showname=1
+    Objective name: objective
+    f(x0) = -2.000000000000000e+00
+
+    [dpo@pod:miniampl (master)]$ ./miniampl wb showname=1 showgrad=1
+    showname=1
+    showgrad=1
+    Objective name: objective
+    f(x0) = -2.000000000000000e+00
+    g(x0) = [  1.0e+00  0.0e+00  0.0e+00 ]
 
 
 What Next?
