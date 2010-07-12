@@ -6,11 +6,26 @@ INCLUDE_DIRS = $(LIBAMPL_DIR)/Src/solvers
 CXX_OPTS = $(addprefix -I,$(INCLUDE_DIRS))
 LIBS = -L$(LIBAMPL_DIR)/Lib -lampl -lfuncadd0
 
-%.o: %.c
-	$(CXX) -c $(CXX_OPTS) $?
+OBJDIR = .objects
+BINDIR = bin
+SRC = src
 
-miniampl: miniampl.o
+all:: $(OBJDIR) $(BINDIR) $(BINDIR)/miniampl
+
+$(OBJDIR)/%.o: $(SRC)/%.c
+	$(CXX) -c $(CXX_OPTS) $? -o $@
+
+$(OBJDIR):
+	[[ ! -d $(OBJDIR) ]] && mkdir $(OBJDIR)
+
+$(BINDIR):
+	[[ ! -d $(BINDIR) ]] && mkdir $(BINDIR)
+
+$(BINDIR)/miniampl: $(OBJDIR)/miniampl.o
 	$(CXX) -o $@ $? $(LIBS)
 
 clean:
-	rm *.o miniampl
+	rm $(OBJDIR)/*
+
+purge:
+	rm -rf $(BINDIR) $(OBJDIR)

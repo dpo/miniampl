@@ -1,5 +1,5 @@
 // Minimal AMPL Example
-// D. Orban
+// D. Orban <dominique.orban@gerad.ca>
 
 #include <stdio.h>
 #include <stdlib.h>
