@@ -21,7 +21,7 @@ $(OBJDIR):
 $(BINDIR):
 	[[ ! -d $(BINDIR) ]] && mkdir $(BINDIR)
 
-$(BINDIR)/miniampl: $(OBJDIR)/miniampl.o
+$(BINDIR)/%: $(OBJDIR)/%.o
 	$(CXX) -o $@ $? $(LIBS)
 
 clean:
