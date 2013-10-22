@@ -53,3 +53,9 @@ at hand as a reference.
 
 Good luck.
 dominique.orban@gerad.ca
+
+
+.. image:: https://d2weczhvl823v0.cloudfront.net/dpo/miniampl/trend.png
+   :alt: Bitdeli badge
+   :target: https://bitdeli.com/free
+
