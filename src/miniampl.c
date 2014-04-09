@@ -54,7 +54,7 @@ int main(int argc, char **argv) {
     n_badvals++;
   }
   if( showname < 0 || showname > 1 ) {
-    Printf("Invalid value for showgrad: %d\n", showgrad);
+    Printf("Invalid value for showname: %d\n", showname);
     n_badvals++;
   }
 
