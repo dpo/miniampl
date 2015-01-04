@@ -1,10 +1,9 @@
-LIBAMPL_DIR = ${HOME}/local/dev/libampl
-
+LIBAMPL_DIR = $(brew --prefix asl)
 
 CXX = gcc -std=c99
-INCLUDE_DIRS = $(LIBAMPL_DIR)/Src/solvers
+INCLUDE_DIRS = $(LIBAMPL_DIR)/include
 CXX_OPTS = $(addprefix -I,$(INCLUDE_DIRS))
-LIBS = -L$(LIBAMPL_DIR)/Lib -lampl -lfuncadd0
+LIBS = -L$(LIBAMPL_DIR)/lib -lasl -lfuncadd0
 
 OBJDIR = .objects
 BINDIR = bin
