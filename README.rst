@@ -24,19 +24,19 @@ call it from the command line. A test example is supplied in `wb.mod` and
 
 ::
 
-    [dpo@pod:miniampl (master)]$ ./miniampl examples/wb    # Only print objective value
+    [dpo@pod:miniampl (master)]$ ./bin/miniampl examples/wb    # Only print objective value
     f(x0) = -2.000000000000000e+00
 
-    [dpo@pod:miniampl (master)]$ ./miniampl -=    # Show available options
+    [dpo@pod:miniampl (master)]$ ./bin/miniampl -=    # Show available options
     showgrad  Evaluate gradient
     showname  Display objective name
 
-    [dpo@pod:miniampl (master)]$ ./miniampl examples/wb showname=1
+    [dpo@pod:miniampl (master)]$ ./bin/miniampl examples/wb showname=1
     showname=1
     Objective name: objective
     f(x0) = -2.000000000000000e+00
 
-    [dpo@pod:miniampl (master)]$ ./miniampl examples/wb showname=1 showgrad=1
+    [dpo@pod:miniampl (master)]$ ./bin/miniampl examples/wb showname=1 showgrad=1
     showname=1
     showgrad=1
     Objective name: objective
