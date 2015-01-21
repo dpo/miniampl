@@ -1,7 +1,7 @@
-LIBAMPL_DIR = $(brew --prefix asl)
+LIBAMPL_DIR = $(shell brew --prefix asl)
 
 CXX = gcc -std=c99
-INCLUDE_DIRS = $(LIBAMPL_DIR)/include
+INCLUDE_DIRS = $(LIBAMPL_DIR)/include/asl
 CXX_OPTS = $(addprefix -I,$(INCLUDE_DIRS))
 LIBS = -L$(LIBAMPL_DIR)/lib -lasl -lfuncadd0
 
